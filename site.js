@@ -20,26 +20,88 @@
 // FOR STEP 16, ADD THREE OF YOUR OWN FAVORITE MOVIES WITH METADATA TO THE END OF THE JSON FILE LIST
 */
 
-
 const vue_app = Vue.createApp({
-      // This automatically imports your movies.json file and puts it into
-      //   the variable: movies
-      created () {
-            fetch('movies.json').then(response => response.json()).then(json => {
-                  this.movies = json
-            })
-      },
-      data() {
-        return {
-            // This holds your movies.json data.
-            movies: [],
-            /* ADD ADDITIONAL VARIABLES FOR STEP 3 HERE */
-         
+  // This automatically imports your movies.json file and puts it into
+  //   the variable: movies
+  created() {
+    fetch("movies.json")
+      .then((response) => response.json())
+      .then((json) => {
+        this.movies = json;
+      });
+  },
+  data() {
+    return {
+      // This holds your movies.json data.
+      movies: [],
+      /* ADD ADDITIONAL VARIABLES FOR STEP 3 HERE */
+      title: "IMDB + Mo's Top 8 Movies",
+      owner: "Morgan",
+      github: " https://github.com/523mmarsi/-Marsiello--NJITP3",
+    };
+  },
+  methods: {
+    /* ADD FUNCTIONS/METHODS FOR STEP 7 HERE */
+    /* array to convert the numeric month into a text month and format the day and year in USA date order */
+    getMonthText(dateArray) {
+      let month = " ";
+      switch (dateArray[1]) {
+        case 1:
+          monthName = "January";
+          break;
+        case 2:
+          monthName = "February";
+          break;
+        case 3:
+          monthName = "March";
+          break;
+        case 4:
+          monthName = "April";
+          break;
+        case 5:
+          monthName = "May";
+          break;
+        case 6:
+          monthName = "June";
+          break;
+        case 7:
+          monthName = "July";
+          break;
+        case 8:
+          monthName = "August";
+          break;
+        case 9:
+          monthName = "September";
+          break;
+        case 10:
+          monthName = "October";
+          break;
+        case 11:
+          monthName = "November";
+          break;
+        case 12:
+          monthName = "December";
+          break;
+      }
+      return monthName + " " + dateArray[2] + ", " + dateArray[0];
+    },
+    /*method that increment posterindex, for the movie at the given “index”, and show the poster at the updated posterindex index. */
+    posterClick(index) {
+      if (
+        this.movies[index].posterindex >=
+        this.movies[index].posters.length - 1
+      ) {
+        this.movies[index].posterindex = 0;
+      } else {
+        this.movies[index].posterindex++;
       }
     },
-      methods: {
-            /* ADD FUNCTIONS/METHODS FOR STEP 7 HERE */
-      }
-})
+    timeText(minutes) {
+      var h = Math.floor(minutes / 60);
+      var min = minutes % 60;
+      return h + "h " + min + "m";
+    }
+  },
+});
 
-vue_app.mount("#vue_app")
+vue_app.mount("#vue_app");
