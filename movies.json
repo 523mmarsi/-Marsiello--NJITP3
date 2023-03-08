@@ -68,5 +68,47 @@
             "likes": 812,
             "dislikes": 101,
             "posterindex": 0
+      },
+            {
+            "title": "The Sandlot",
+            "iscore": 7.8,
+            "rating": "PG",
+            "runtime": 101,
+            "released": [1993, 4, 7],
+            "country": "USA",
+            "posters": ["img/Sandlot1.jpg", "img/Sandlot2.jpg"],
+            "imdb": "https://www.imdb.com/title/tt0108037/?ref_=fn_al_tt_1",
+            "website": "https://family.20thcenturystudios.com/movies/the-sandlot",
+            "likes": 812,
+            "dislikes": 101,
+            "posterindex": 0
+      },
+            {
+            "title": "10 Things I Hate About You",
+            "iscore": 7.3,
+            "rating": "PG-13",
+            "runtime": 97,
+            "released": [1999, 3, 31],
+            "country": "USA",
+            "posters": ["img/10TIHAY-1.jpg", "img/10TIHAY-2.jpg"],
+            "imdb": "https://www.imdb.com/title/tt0147800/?ref_=nv_sr_srsg_0",
+            "website": "https://musicboxtheatre.com/films-and-events/10-things-i-hate-about-you",
+            "likes": 812,
+            "dislikes": 101,
+            "posterindex": 0
+      },
+            {
+            "title": "The Breakfast Club",
+            "iscore": 7.8,
+            "rating": "R",
+            "runtime": 97,
+            "released": [1985, 2, 15],
+            "country": "USA",
+            "posters": ["img/BreakfastClub1.jpg", "img/BreakfastClub2.jpg"],
+            "imdb": "https://www.imdb.com/title/tt0088847/?ref_=nv_sr_srsg_0",
+            "website": "https://www.criterion.com/films/29272-the-breakfast-club",
+            "likes": 812,
+            "dislikes": 101,
+            "posterindex": 0
       }
 ]

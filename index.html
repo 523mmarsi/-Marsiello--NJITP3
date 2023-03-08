@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Mo's NJIT Project 3</title>
+	<title>IMDB Mo's Top 8 Movies</title>
 
 	<!-- Our CSS File along with Boostrap, and Bootstrap Icon Styles-->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -27,7 +27,7 @@
 	    <div class="header">
 
 	      <div class="container">
-	        <h1 id="app_title">Mo's NJIT Project 3</h1>
+	        <h1 id="app_title">IMDB Mo's Top 8 Movies</h1>
 	      </div>
 
 	    </div>
@@ -40,7 +40,7 @@
 	            <div class="thumbnail">
 
 						<img v-on:click="posterClick(index)" class="poster img-fluid" :src ="movies[index].posters[movies[index].posterindex]"/> 
-						<div class="imageInfo"> {{ movies[index].posterindex + 1 }} of {{ movies[index].posters.length }} </div>
+						<div class="imageInfo"> poster {{ movies[index].posterindex + 1 }} of {{ movies[index].posters.length }} </div>
 
 						<p class="title">{{ movies[index].title }} ({{ movies[index].country }})</p>
 						<p class="score"><i class="bi bi-star" aria-hidden="true"></i> {{ movies[index].iscore }} </p>
@@ -60,7 +60,7 @@
 
 	    <div class="footer">
 	      <div class="container">
-			<a id="github" class="btn btn-lg btn-warning">
+			<a id="github" class="btn btn-lg btn-warning" v-bind:href="'https://github.com/523mmarsi/-Marsiello--NJITP3'">
 				<i class="bi bi-github me-2"></i>{{owner}}
 	  		</a>
 	      </div>
